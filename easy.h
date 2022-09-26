@@ -27,4 +27,6 @@ int itc_spr (int a, int b);
 
 int itc_sqrt (int a);
 
+int itc_str (int a, int b, int c);
+
 #endif // EASY_H_INCLUDED
