@@ -25,4 +25,6 @@ int itc_skv (int a);
 
 int itc_spr (int a, int b);
 
+int itc_sqrt (int a);
+
 #endif // EASY_H_INCLUDED
