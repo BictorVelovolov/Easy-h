@@ -14,7 +14,7 @@ int itc_max(int a, int b) //Number 7
         return a;
     return b;
 }
-int itc_sqrt (int a) //Number 18
+int itc_sqrt (int a) //Number 11
 {
     int i;
     i = 0;
