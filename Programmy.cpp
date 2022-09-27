@@ -26,23 +26,13 @@ double itc_fabs (double a) //Number 4
 }
 int itc_revnbr(int a) //Number 5
 {
-     int s, d, e, m;
-    s = a / 100; //сотни
-  d = a / 10 % 10; //десятки
-  e = a % 10; //единицы
-  if (a>=0 && a<10)
+    int ch, obr_ch;
+    obr_ch = 0;
+  while (a>0)
   {
-      m = e;
-      return m;
+      ch = a % 10;
+      obr_ch = obr_ch*10 + ch;
+      a = a / 10;
   }
-  if (a>=10 && a<100)
-  {
-  m = e * 10 + d;
-    return m;
-  }
-  if (a>=100 && a<1000)
-    {
-    m = e * 100 + d * 10 + s;
-    return m;
-    }
-    }
+  return obr_ch;
+}
