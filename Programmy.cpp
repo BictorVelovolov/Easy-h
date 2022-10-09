@@ -28,11 +28,25 @@ int itc_revnbr(int a) //Number 5
 {
     int ch, obr_ch;
     obr_ch = 0;
-  while (a>0)
-  {
-      ch = a % 10;
-      obr_ch = obr_ch*10 + ch;
-      a = a / 10;
-  }
-  return obr_ch;
+      if (a>=0)
+      {
+          while (a!=0)
+        {
+        ch = a % 10;
+        obr_ch = obr_ch*10 + ch;
+        a = a / 10;
+        }
+        return obr_ch;
+      }
+      else
+        {
+        a = a * (-1);
+           while (a!=0)
+           {
+            ch = a % 10;
+            obr_ch = obr_ch*10 + ch;
+            a = a / 10;
+            }
+            return obr_ch * (-1);
+        }
 }
