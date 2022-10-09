@@ -29,12 +29,15 @@ int itc_sqrt (int a) //Number 11
 }
 int itc_str (int a, int b, int c) //Number 13
 {
-    int i, p;
+int i, p;
     if ((a > 0 && b > 0 && c > 0)&&(a < b + c && b < c + a && c < a + b))
     {
-      p = (a + b + c)/2;
-    i= p * (p - a) * (p - b) * (p - c);
-    return itc_sqrt (i);
+        p = (a + b + c)/2;
+        i= p * (p - a) * (p - b) * (p - c);
+        if (i==0)
+            return -1;
+        return itc_sqrt (i);
     }
     return -1;
+}
 }
